@@ -1,20 +1,59 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BlogController!{% endblock %}
+{% block title %}Welcome to My Portfolio{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .profile-section {
+            padding: 4rem 0;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        }
+        .about-section {
+            padding: 2rem 0;
+        }
+        .skill-card {
+            transition: transform 0.3s;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    {# Profile Section #}
+    <section class="profile-section">
+        <div class="container text-center">
+            <h1 class="display-4 mb-3">Hello, I'm Alia</h1>
+            <p class="lead mb-2">Networks & Telecommunications Student</p>
+            <p class="text-muted mb-4">IUT de Roanne - RT1 Group</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#about" class="btn btn-primary">About Me</a>
+                <a href="#portfolio" class="btn btn-outline-primary">My Portfolio</a>
+            </div>
+        </div>
+    </section>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    {# About Section #}
+    <section id="about" class="about-section container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center mb-4">About Me</h2>
+                <p class="text-center">I am a passionate student in Networks and Telecommunications at IUT de Roanne. 
+                   I'm particularly interested in network infrastructure and cybersecurity. 
+                   Currently focusing on developing my skills in web development and system administration.</p>
+            </div>
+        </div>
+    </section>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/symfony/tp1/aliasymfony/src/Controller/BlogController.php</code></li>
-        <li>Your template at <code>C:/symfony/tp1/aliasymfony/templates/blog/index.html.twig</code></li>
-    </ul>
-</div>
-{% endblock %}
+    {# Learn More Section #}
+    <section class="container my-5">
+        <div class="card bg-light">
+            <div class="card-body">
+                <h2 class="text-center">Learn More About Me</h2>
+                <p class="text-center">Want to discover my hobbies, passions, and projects? Click below!</p>
+                <div class="row g-4 mt-3">
+                    <div class="col-md-4">
+                        <div class="card skill-card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="car
