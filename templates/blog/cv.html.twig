@@ -1,5 +1,130 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <h1>ehbsfeshrushghdjghdjgdihgodhdhogo</h1>
+{% block title %}CV - ABDEDAIME Alia{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .cv-header {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .experience-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid #0d6efd;
+        }
+        .skill-category {
+            margin-bottom: 2rem;
+        }
+    </style>
 {% endblock %}
+
+{% block body %}
+    {# En-tête du CV #}
+    <header class="cv-header">
+        <div class="container text-center">
+            <h1 class="display-5 mb-3">Technicienne Télécoms et Réseaux</h1>
+            <p class="lead">Étudiante passionnée par les réseaux de télécommunication et leur évolution</p>
+        </div>
+    </header>
+
+    <div class="container">
+        {# Section Formation #}
+        <section class="mb-5">
+            <h2 class="section-title">Formation</h2>
+            <div class="experience-item">
+                <h4>BUT Réseaux et Télécommunications</h4>
+                <p class="text-muted">2024 - 2025 | IUT de Roanne</p>
+                <p>Formation technique en réseaux informatiques et télécommunications</p>
+            </div>
+            
+            <div class="experience-item">
+                <h4>BUT Génie Chimique Génie des Procédés</h4>
+                <p class="text-muted">2023 - 2024 | IUT Lyon 1</p>
+                <p>Formation en génie des procédés et chimie industrielle</p>
+            </div>
+
+            <div class="experience-item">
+                <h4>Baccalauréat Général</h4>
+                <p class="text-muted">2023 | Mention Assez Bien</p>
+                <p>Lycée Général Pierre Brossolette - Villeurbanne, Lyon</p>
+                <p>Spécialités Mathématiques et Physique-Chimie</p>
+            </div>
+        </section>
+
+        {# Section Expériences #}
+        <section class="mb-5">
+            <h2 class="section-title">Expériences Professionnelles</h2>
+            <div class="experience-item">
+                <h4>Représentante au Mondial des Métiers</h4>
+                <p class="text-muted">2023 - 2024 | Lyon</p>
+                <ul>
+                    <li>Présentation du BUT GCGP aux visiteurs</li>
+                    <li>Animation de stands et démonstrations</li>
+                    <li>Interaction avec les futurs étudiants</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>Participation aux Portes Ouvertes</h4>
+                <p class="text-muted">2023 - 2024 | IUT Lyon 1</p>
+                <ul>
+                    <li>Accueil et orientation des lycéens</li>
+                    <li>Présentation du cursus et des débouchés</li>
+                    <li>Réponse aux questions des futurs étudiants</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>Stage de Découverte</h4>
+                <p class="text-muted">2019 - 2020 | SFR Télécom</p>
+                <ul>
+                    <li>Découverte de l'organisation des réseaux télécoms</li>
+                    <li>Observation des processus de maintenance</li>
+                    <li>Initiation aux infrastructures de télécommunication</li>
+                </ul>
+            </div>
+        </section>
+
+        {# Section Compétences #}
+        <section class="mb-5">
+            <h2 class="section-title">Compétences</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skill-category">
+                        <h4>Compétences Techniques</h4>
+                        <ul>
+                            <li>Configuration de base des réseaux</li>
+                            <li>Analyse et mesure de signaux</li>
+                            <li>Connaissance des protocoles de télécommunication</li>
+                            <li>Maîtrise des outils de diagnostic réseau</li>
+                            <li>Administration système de base</li>
+                            <li>Développement web avec Symfony</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-category">
+                        <h4>Compétences Transversales</h4>
+                        <ul>
+                            <li>Communication professionnelle efficace</li>
+                            <li>Capacité d'adaptation</li>
+                            <li>Esprit d'analyse et de synthèse</li>
+                            <li>Travail en équipe</li>
+                            <li>Sens de l'organisation</li>
+                            <li>Pédagogie et transmission des connaissances</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+      

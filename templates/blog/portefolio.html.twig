@@ -1,5 +1,183 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Mon E-Portfolio - ABDEDAIME Alia{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .competence-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .niveau-acquisition {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .niveau-point {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .niveau-atteint {
+            background-color: #0d6efd;
+        }
+        .niveau-non-atteint {
+            background-color: rgba(13, 110, 253, 0.2);
+        }
+        .preuve-section {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        .analyse-section {
+            background: rgba(13, 110, 253, 0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        .ressource-tag {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background-color: rgba(13, 110, 253, 0.1);
+            border-radius: 20px;
+            margin-left: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
-    <h1>Ici je calle mon portefolio lol alia et kenan</h1>
+    <div class="container mt-5">
+        <header class="text-center mb-5">
+            <h1 class="display-4">E-Portfolio</h1>
+            <p class="lead">Documentation de mon parcours d'apprentissage en Réseaux et Télécommunications</p>
+        </header>
+
+        {# Compétence 1 #}
+        <section class="competence-section">
+            <h2 class="mb-3">
+                <i class="bi bi-lightning-charge me-2"></i>
+                Électricité et Équipements Réseaux
+                <span class="ressource-tag">R1.06</span>
+            </h2>
+            
+            <div class="niveau-acquisition">
+                <span class="niveau-point niveau-atteint" title="Niveau 1"></span>
+                <span class="niveau-point niveau-atteint" title="Niveau 2"></span>
+                <span class="niveau-point niveau-atteint" title="Niveau 3"></span>
+                <span class="niveau-point niveau-atteint" title="Niveau 4"></span>
+                <span class="ms-2">Niveau d'acquisition : 4/4</span>
+            </div>
+
+            <div class="preuve-section">
+                <h4>Preuves d'acquisition</h4>
+                <p>Application pratique des lois fondamentales de l'électricité dans le contexte des équipements réseaux. 
+                   Réalisation de mesures et de tests sur des circuits électroniques dans le cadre du module R1.06.</p>
+            </div>
+
+            <div class="analyse-section">
+                <h4>Analyse réflexive</h4>
+                <p>Au début de ma formation, j'appréhendais les aspects électroniques du cursus. Cependant, grâce à une 
+                   approche méthodique et une recherche approfondie sur le fonctionnement des équipements, j'ai 
+                   progressivement développé une compréhension solide des concepts fondamentaux. Mon point d'amélioration 
+                   principal reste l'optimisation du temps lors des manipulations pratiques.</p>
+            </div>
+        </section>
+
+        {# Compétence 2 #}
+        <section class="competence-section">
+            <h2 class="mb-3">
+                <i class="bi bi-diagram-3 me-2"></i>
+                Configuration Réseau Local
+                <span class="ressource-tag">R1.01</span>
+            </h2>
+            
+            <div class="niveau-acquisition">
+                <span class="niveau-point niveau-atteint" title="Niveau 1"></span>
+                <span class="niveau-point niveau-atteint" title="Niveau 2"></span>
+                <span class="niveau-point niveau-atteint" title="Niveau 3"></span>
+                <span class="niveau-point niveau-atteint" title="Niveau 4"></span>
+                <span class="ms-2">Niveau d'acquisition : 4/4</span>
+            </div>
+
+            <div class="preuve-section">
+                <h4>Preuves d'acquisition</h4>
+                <p>Configuration réussie des services réseau essentiels (DHCP, DNS, HTTP) et mise en place 
+                   d'infrastructures réseau fonctionnelles dans le cadre du module R1.01. Documentation des configurations et des tests effectués.</p>
+            </div>
+
+            <div class="analyse-section">
+                <h4>Analyse réflexive</h4>
+                <p>Bien que familière avec les concepts de base des réseaux, j'ai approfondi ma compréhension à travers 
+                   la configuration pratique des services. Ma connaissance préalable des switches et des services réseaux 
+                   m'a permis d'assimiler rapidement les nouveaux concepts. Je travaille actuellement sur l'optimisation 
+                   de mes processus de configuration pour gagner en efficacité.</p>
+            </div>
+        </section>
+
+        {# Compétence 3 #}
+        <section class="competence-section">
+            <h2 class="mb-3">
+                <i class="bi bi-graph-up me-2"></i>
+                Analyse de Signaux
+                <span class="ressource-tag">R1.04</span>
+            </h2>
+            
+            <div class="niveau-acquisition">
+                <span class="niveau-point niveau-atteint" title="Niveau 1"></span>
+                <span class="niveau-point niveau-atteint" title="Niveau 2"></span>
+                <span class="niveau-point niveau-atteint" title="Niveau 3"></span>
+                <span class="niveau-point niveau-non-atteint" title="Niveau 4"></span>
+                <span class="ms-2">Niveau d'acquisition : 3/4</span>
+            </div>
+
+            <div class="preuve-section">
+                <h4>Preuves d'acquisition</h4>
+                <p>Réalisation de mesures et analyses de signaux en travaux pratiques du module R1.04. Utilisation d'outils 
+                   spécialisés pour l'analyse et l'interprétation des données.</p>
+            </div>
+
+            <div class="analyse-section">
+                <h4>Analyse réflexive</h4>
+                <p>Partant d'un niveau débutant dans l'analyse des signaux, j'ai développé mes compétences grâce à une 
+                   pratique régulière et un apprentissage collaboratif. Le soutien de mes professeurs et de mes camarades 
+                   a été crucial dans ma progression. Je continue à m'exercer individuellement pour renforcer ma 
+                   compréhension et mon expertise dans ce domaine.</p>
+            </div>
+        </section>
+
+        {# Compétence 4 #}
+        <section class="competence-section">
+            <h2 class="mb-3">
+                <i class="bi bi-people me-2"></i>
+                Environnement de Développement Collaboratif
+                <span class="ressource-tag">R1.09</span>
+            </h2>
+            
+            <div class="niveau-acquisition">
+                <span class="niveau-point niveau-atteint" title="Niveau 1"></span>
+                <span class="niveau-point niveau-atteint" title="Niveau 2"></span>
+                <span class="niveau-point niveau-atteint" title="Niveau 3"></span>
+                <span class="ms-2">Niveau d'acquisition : 3/3</span>
+            </div>
+
+            <div class="preuve-section">
+                <h4>Preuves d'acquisition</h4>
+                <p>Utilisation active de Visual Studio Code et GitHub pour les projets collaboratifs du module R1.09. 
+                   Participation à des projets d'équipe avec gestion de versions.</p>
+            </div>
+
+            <div class="analyse-section">
+                <h4>Analyse réflexive</h4>
+                <p>La découverte des outils de développement collaboratif comme VS Code et GitHub a transformé ma façon 
+                   de travailler. J'ai appris à exploiter leurs fonctionnalités pour créer un environnement de travail 
+                   efficace. Je continue d'explorer ces outils en profondeur pour maîtriser leurs fonctionnalités 
+                   avancées et optimiser mon flux de travail.</p>
+            </div>
+        </section>
+    </div>
 {% endblock %}
