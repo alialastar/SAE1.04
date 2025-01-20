@@ -1,5 +1,126 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Mes Loisirs - ABDEDAIME Alia{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .hobby-section {
+            padding: 2rem 0;
+        }
+        .hobby-card {
+            transition: transform 0.3s;
+            margin-bottom: 2rem;
+            border: none;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        .hobby-card:hover {
+            transform: translateY(-5px);
+        }
+        .hobby-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+        .header-section {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
-    <h1>Mes passions</h1>
+    {# Header Section #}
+    <section class="header-section">
+        <div class="container text-center">
+            <h1 class="display-4">Mes Passions & Loisirs</h1>
+            <p class="lead">Découvrez les activités qui m'animent au quotidien</p>
+        </div>
+    </section>
+
+    <div class="container hobby-section">
+        <div class="row">
+            {# Lecture #}
+            <div class="col-md-4">
+                <div class="card hobby-card">
+                    <div class="card-body text-center">
+                        <div class="hobby-icon">
+                            <i class="bi bi-book"></i>
+                        </div>
+                        <h3 class="card-title h4">Passion pour la Lecture</h3>
+                        <p class="card-text">
+                            La lecture est pour moi une véritable évasion. Je m'immerge dans différents genres littéraires, 
+                            des romans contemporains aux ouvrages de développement personnel. Cette passion me permet de :
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check2 me-2"></i>Développer ma créativité</li>
+                            <li><i class="bi bi-check2 me-2"></i>Enrichir mon vocabulaire</li>
+                            <li><i class="bi bi-check2 me-2"></i>Découvrir de nouvelles perspectives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            {# Course à pied #}
+            <div class="col-md-4">
+                <div class="card hobby-card">
+                    <div class="card-body text-center">
+                        <div class="hobby-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h3 class="card-title h4">Course à Pied</h3>
+                        <p class="card-text">
+                            Le running est devenu une partie essentielle de ma routine. Cette activité me permet de :
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check2 me-2"></i>Maintenir une bonne condition physique</li>
+                            <li><i class="bi bi-check2 me-2"></i>Décompresser après les cours</li>
+                            <li><i class="bi bi-check2 me-2"></i>Me fixer des objectifs personnels</li>
+                            <li><i class="bi bi-check2 me-2"></i>Profiter de la nature en ville</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            {# Cuisine #}
+            <div class="col-md-4">
+                <div class="card hobby-card">
+                    <div class="card-body text-center">
+                        <div class="hobby-icon">
+                            <i class="bi bi-egg-fried"></i>
+                        </div>
+                        <h3 class="card-title h4">Art Culinaire Oriental</h3>
+                        <p class="card-text">
+                            Passionnée par les cuisines marocaine et syrienne, j'explore les saveurs et traditions culinaires de ces cultures riches. Cette passion me permet de :
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check2 me-2"></i>Maîtriser les épices traditionnelles</li>
+                            <li><i class="bi bi-check2 me-2"></i>Préparer des tajines marocains authentiques</li>
+                            <li><i class="bi bi-check2 me-2"></i>Découvrir les pâtisseries orientales</li>
+                            <li><i class="bi bi-check2 me-2"></i>Apprendre les techniques de la cuisine levantine</li>
+                        </ul>
+                        <div class="mt-3 p-3 bg-light rounded">
+                            <h5 class="mb-2">Spécialités favorites</h5>
+                            <p class="mb-2"><strong>Cuisine marocaine :</strong> Tajine, couscous, pastilla</p>
+                            <p class="mb-0"><strong>Cuisine syrienne :</strong> Kibbeh, fatayer, taboulé</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {# Citation inspirante #}
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card hobby-card">
+                    <div class="card-body text-center py-4">
+                        <p class="lead mb-0 fst-italic">
+                            "Ces passions m'aident à maintenir un équilibre entre vie étudiante et développement personnel, 
+                            tout en nourrissant ma curiosité et mon bien-être au quotidien."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
